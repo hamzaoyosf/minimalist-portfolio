@@ -4,6 +4,45 @@ html, body {
     overflow: hidden;
 }
 
+/* Fonts */
+@font-face {
+    font-family: "origin_font";
+    src: url("/My_Projects/minimalist-portfolio/Media/Fonts/origin_font/origin_font_bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "origin_font_";
+    src: url("/My_Projects/minimalist-portfolio/Media/Fonts/origin_font/origin_font_italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "origin_font";
+    src: url("/My_Projects/minimalist-portfolio/Media/Fonts/origin_font/origin_font_bolditalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "origin_font";
+    src: url("/My_Projects/minimalist-portfolio/Media/Fonts/origin_font/origin_font_regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Typing Effect */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
 /* Body */
 body {
     background-color: rgb(46, 46, 46);
