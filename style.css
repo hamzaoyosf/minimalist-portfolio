@@ -43,6 +43,68 @@ html, body {
     }
 }
 
+/* Responsive */
+/* Mobile: Small */
+@media (max-width: 480px) {
+    .main-section {
+        
+        max-width: 480px;
+    }
+    .highlights {
+        width: 100%;
+    }
+}
+
+/* Mobile: Large */
+@media (min-width: 481px) and (max-width: 767px) {
+    .main-section {
+        min-width: 471px;
+        max-width: 757px;
+    }
+    .highlights {
+        width: 100%;
+    }
+}
+
+/* Tablet: Portait */
+@media (min-width: 768px) and (max-width: 991px) {
+    .main-section {
+        min-width: 758px;
+        max-width: 981px;
+    }
+    .highlights {
+        width: 100%;
+    }
+}
+
+/* Tablet: landscape / Small Laptop */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .main-section {
+        min-width: 982px;
+        max-width: 1189px;
+    }
+    .highlights {
+        width: 41rem;
+    }
+}
+
+/* Desktop: medium */
+@media (min-width: 1200px) {
+    .highlights {
+        width: 41rem;
+    }
+}
+
+/* Desktop: Large / 4K */
+@media (min-width: 1440px) {
+    .main-section {
+        min-width: 1440px;
+    }
+    .highlights {
+        width: 41rem;
+    }
+}
+
 /* Body */
 body {
     background-color: rgb(46, 46, 46);
