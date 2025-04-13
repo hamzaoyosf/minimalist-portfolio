@@ -180,3 +180,215 @@ for (let i = 0; i < highlightAnimationThree.length; i++) {
 }, 1600);
     });
 }
+
+
+// First Highlight
+// Left Side Hovering
+let hoverOne = document.getElementsByClassName('parent-block-one');
+
+for (let i = 0; i < hoverOne.length; i++) {
+  let addedElement = null;
+
+  hoverOne[i].addEventListener('mouseover', function () {
+    if (!addedElement) {
+      addedElement = document.createElement('div');
+      addedElement.classList.add('bg-image'); // add class with styling
+
+      addedElement.innerHTML = `
+        <img src="/My_Projects/minimalist-portfolio/Media/Images/Left.png" alt="">
+      `;
+
+      const target = document.querySelector('.left-hover');
+      if (target) {
+        target.appendChild(addedElement);
+      }
+    }
+
+    hoverOne[i].classList.add('left-hoverd');
+  });
+
+  hoverOne[i].addEventListener('mouseout', function () {
+    if (addedElement && addedElement.parentNode) {
+      addedElement.parentNode.removeChild(addedElement);
+      addedElement = null;
+    }
+
+    hoverOne[i].classList.remove('left-hoverd');
+  });
+}
+
+
+// Right Side Hovering
+let rightHoverOne = document.getElementsByClassName('parent-block-one');
+
+for (let i = 0; i < rightHoverOne.length; i++) {
+  let addedElement = null;
+
+  rightHoverOne[i].addEventListener('mouseover', function () {
+    if (!addedElement) {
+      addedElement = document.createElement('div');
+      addedElement.classList.add('bg-image'); // add class with styling
+
+      addedElement.innerHTML = `
+        <img src="/My_Projects/minimalist-portfolio/Media/Images/Right.png" alt="">
+      `;
+
+      const target = document.querySelector('.right-hover');
+      if (target) {
+        target.appendChild(addedElement);
+      }
+    }
+
+    rightHoverOne[i].classList.add('right-hoverd');
+  });
+
+  rightHoverOne[i].addEventListener('mouseout', function () {
+    if (addedElement && addedElement.parentNode) {
+      addedElement.parentNode.removeChild(addedElement);
+      addedElement = null; 
+    }
+
+    rightHoverOne[i].classList.remove('right-hoverd');
+  });
+}
+
+
+// Second Highlight
+// Left Side Hovering
+let hoverTwo = document.getElementsByClassName('parent-block-two');
+
+for (let i = 0; i < hoverTwo.length; i++) {
+  let addedElement = null;
+
+  hoverTwo[i].addEventListener('mouseover', function () {
+    if (!addedElement) {
+      addedElement = document.createElement('div');
+      addedElement.classList.add('bg-image'); // add class with styling
+
+      addedElement.innerHTML = `
+        <img src="/My_Projects/minimalist-portfolio/Media/Images/Left.png" alt="">
+      `;
+
+      const target = document.querySelector('.left-hover');
+      if (target) {
+        target.appendChild(addedElement);
+      }
+    }
+
+    hoverTwo[i].classList.add('left-hoverd');
+  });
+
+  hoverTwo[i].addEventListener('mouseout', function () {
+    if (addedElement && addedElement.parentNode) {
+      addedElement.parentNode.removeChild(addedElement);
+      addedElement = null;
+    }
+
+    hoverTwo[i].classList.remove('left-hoverd');
+  });
+}
+
+
+// Right Side Hovering
+let rightHoverTwo = document.getElementsByClassName('parent-block-two');
+
+for (let i = 0; i < rightHoverTwo.length; i++) {
+  let addedElement = null;
+
+  rightHoverTwo[i].addEventListener('mouseover', function () {
+    if (!addedElement) {
+      addedElement = document.createElement('div');
+      addedElement.classList.add('bg-image'); // add class with styling
+
+      addedElement.innerHTML = `
+        <img src="/My_Projects/minimalist-portfolio/Media/Images/Right.png" alt="">
+      `;
+
+      const target = document.querySelector('.right-hover');
+      if (target) {
+        target.appendChild(addedElement);
+      }
+    }
+
+    rightHoverTwo[i].classList.add('right-hoverd');
+  });
+
+  rightHoverTwo[i].addEventListener('mouseout', function () {
+    if (addedElement && addedElement.parentNode) {
+      addedElement.parentNode.removeChild(addedElement);
+      addedElement = null; 
+    }
+
+    rightHoverTwo[i].classList.remove('right-hoverd');
+  });
+}
+
+// Third Highlight
+// Left Side Hovering
+let hoverThree = document.getElementsByClassName('parent-block-three');
+
+for (let i = 0; i < hoverThree.length; i++) {
+  let addedElement = null;
+
+  hoverThree[i].addEventListener('mouseover', function () {
+    if (!addedElement) {
+      addedElement = document.createElement('div');
+      addedElement.classList.add('bg-image'); // add class with styling
+
+      addedElement.innerHTML = `
+        <img src="/My_Projects/minimalist-portfolio/Media/Images/Left.png" alt="">
+      `;
+
+      const target = document.querySelector('.left-hover');
+      if (target) {
+        target.appendChild(addedElement);
+      }
+    }
+
+    hoverThree[i].classList.add('left-hoverd');
+  });
+
+  hoverThree[i].addEventListener('mouseout', function () {
+    if (addedElement && addedElement.parentNode) {
+      addedElement.parentNode.removeChild(addedElement);
+      addedElement = null;
+    }
+
+    hoverThree[i].classList.remove('left-hoverd');
+  });
+}
+
+
+// Right Side Hovering
+let rightHoverThree = document.getElementsByClassName('parent-block-three');
+
+for (let i = 0; i < rightHoverThree.length; i++) {
+  let addedElement = null;
+
+  rightHoverThree[i].addEventListener('mouseover', function () {
+    if (!addedElement) {
+      addedElement = document.createElement('div');
+      addedElement.classList.add('bg-image'); // add class with styling
+
+      addedElement.innerHTML = `
+        <img src="/My_Projects/minimalist-portfolio/Media/Images/Right.png" alt="">
+      `;
+
+      const target = document.querySelector('.right-hover');
+      if (target) {
+        target.appendChild(addedElement);
+      }
+    }
+
+    rightHoverThree[i].classList.add('right-hoverd');
+  });
+
+  rightHoverThree[i].addEventListener('mouseout', function () {
+    if (addedElement && addedElement.parentNode) {
+      addedElement.parentNode.removeChild(addedElement);
+      addedElement = null; 
+    }
+
+    rightHoverThree[i].classList.remove('right-hoverd');
+  });
+}
