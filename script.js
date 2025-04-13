@@ -62,3 +62,121 @@ function loopTyping() {
 
 // Start loop
 loopTyping();
+
+
+// Circle Animation   
+let anim = document.getElementsByClassName('hero-pic');
+
+for (let i = 0; i < anim.length; i++) {
+    anim[i].addEventListener('click', function () {
+      let style = document.createElement('style');
+      style.innerHTML = `
+      @keyframes loading {
+        100% {
+          stroke: #55ff00;
+          stroke-dasharray: 8;
+          transform: (rotate 210deg);
+        }
+      }
+      .pic .statu svg {
+        animation:loading 1500ms ease-in-out;
+      }
+      `;
+      document.head.appendChild(style);
+
+      anim[i].classList.add('dynamic-class');
+        
+        setTimeout(() => {
+  style.parentNode.removeChild(style);
+  alert;
+}, 1600);
+    });
+}
+
+
+// Highlights Circle One Animation
+let highlightAnimationOne = document.getElementsByClassName('parent-block-one');
+
+for (let i = 0; i < highlightAnimationOne.length; i++) {
+    highlightAnimationOne[i].addEventListener('click', function () {
+      let style = document.createElement('style');
+      style.innerHTML = `
+      @keyframes loading {
+        100% {
+          stroke: #55ff00;
+          stroke-dasharray: 8;
+          transform: (rotate 210deg);
+        }
+      }
+      .parent-block-one .child-block-one svg {
+        animation:loading 1500ms ease-in-out;
+      }
+      `;
+      document.head.appendChild(style);
+
+      highlightAnimationOne[i].classList.add('dynamic-class');
+        
+        setTimeout(() => {
+  style.parentNode.removeChild(style);
+  alert;
+}, 1600);
+    });
+}
+
+// Highlights Circle Two Animation
+let highlightAnimationTwo = document.getElementsByClassName('parent-block-two');
+
+for (let i = 0; i < highlightAnimationTwo.length; i++) {
+    highlightAnimationTwo[i].addEventListener('click', function () {
+      let style = document.createElement('style');
+      style.innerHTML = `
+      @keyframes loading {
+        100% {
+          stroke: #55ff00;
+          stroke-dasharray: 8;
+          transform: (rotate 210deg);
+        }
+      }
+      .parent-block-two .child-block-two svg {
+        animation:loading 1500ms ease-in-out;
+      }
+      `;
+      document.head.appendChild(style);
+
+      highlightAnimationTwo[i].classList.add('dynamic-class');
+        
+        setTimeout(() => {
+  style.parentNode.removeChild(style);
+  alert;
+}, 1600);
+    });
+}
+
+// Highlights Circle Three Animation
+let highlightAnimationThree = document.getElementsByClassName('parent-block-three');
+
+for (let i = 0; i < highlightAnimationThree.length; i++) {
+    highlightAnimationThree[i].addEventListener('click', function () {
+      let style = document.createElement('style');
+      style.innerHTML = `
+      @keyframes loading {
+        100% {
+          stroke: #55ff00;
+          stroke-dasharray: 8;
+          transform: (rotate 210deg);
+        }
+      }
+      .parent-block-three .child-block-three svg {
+        animation:loading 1500ms ease-in-out;
+      }
+      `;
+      document.head.appendChild(style);
+
+      highlightAnimationThree[i].classList.add('dynamic-class');
+        
+        setTimeout(() => {
+  style.parentNode.removeChild(style);
+  alert;
+}, 1600);
+    });
+}
