@@ -160,6 +160,27 @@ p, li {
     border-radius: 30px;
 }
 
+.left-hover img {
+    width: 300px;
+    animation: showe 1300ms ease-in-out;
+    position: absolute;
+    top: 12%;
+    right: 60%;
+}
+
+.right-hover img {
+    width: 310px;
+    animation: showe 1300ms ease-in-out;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+}
+
+@keyframes showe {
+    0%{ opacity: 0 }
+    100% { opacity: 1 }
+}
+
 .main-hero {
     display: flex;
     justify-content: center;
