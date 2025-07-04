@@ -4,6 +4,32 @@ html, body {
     overflow: hidden;
 }
 
+/* width */
+::-webkit-scrollbar {
+width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #575757; 
+border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: rgb(0, 102, 0); 
+}
+
+::selection {
+    background-color: #008f07;
+    color: #fff;
+}
+
 /* Fonts */
 @font-face {
     font-family: "origin_font";
@@ -147,7 +173,6 @@ p, li {
 
 /* Main Section */
 .main {
-    padding: 0;
     margin: 10px;
     flex: 1;
 }
@@ -411,4 +436,476 @@ p, li {
     stroke-dasharray: 0.1;
     stroke-dashoffset:0;
     stroke-linecap:round;
+}
+
+/* About me Pop-Up Section */
+.about-me {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(22, 22, 22);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.about-me .top-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 10px;
+    padding: 0 10px;
+}
+
+.about-me .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-me .logo img {
+    width: 60px;
+    border-radius: 100%;
+    box-shadow:  0 0 8px black;
+    outline: #ffffff solid 1.5px;
+}
+
+.about-me .logo .name {
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* or any small value */
+    margin-left: 10px;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+.about-me .logo h1 {
+    margin: 0;
+    font-size: 1rem;
+    text-align: end;
+    padding: 0;
+    text-shadow:  0 0 6px black;
+    text-decoration: none;
+}
+
+.about-me .logo h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    color: #c7c7c7;
+    text-shadow:  0 0 6px rgb(0, 0, 0);
+}
+
+.about-me .close-button button{
+    width: 60px;
+    background-color: rgb(255, 255, 255);
+    color: #181818;
+    padding: 8px;
+    text-align: center;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow:  0 0 8px black;
+}
+
+.about-me .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.about-me .content h1 {
+    margin: 20px 0 0 0;
+}
+
+.about-me .content img {
+    width: 350px;
+}
+
+.about-me p {
+    margin: 0;
+    font-size: 1rem;
+    padding: 0 2%;
+}
+
+/* My Work Pop-Up Section */
+.my-work {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(22, 22, 22);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.my-work .top-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 0 10px;
+}
+
+.my-work .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.my-work .logo img {
+    width: 60px;
+    border-radius: 100%;
+    box-shadow:  0 0 8px black;
+    outline: #ffffff solid 1.5px;
+}
+
+.my-work .logo .name {
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* or any small value */
+    margin-left: 10px;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+.my-work .logo h1, a {
+    margin: 0;
+    font-size: 1rem;
+    padding: 0;
+    text-shadow:  0 0 6px black;
+    text-decoration: none;
+}
+
+.my-work .logo h2, a {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-shadow:  0 0 6px rgb(0, 0, 0);
+}
+
+.my-work .close-button button{
+    width: 60px;
+    background-color: rgb(255, 255, 255);
+    color: #181818;
+    padding: 8px;
+    text-align: center;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow:  0 0 8px black;
+}
+
+.my-work .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.my-work .content .gallery {
+    display:flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 15px;
+}
+
+.my-work .content .gallery img {
+    width: 400px;
+}
+
+.my-work .content .gallery .title {
+    width: 250px;
+    gap: -1px;
+}
+
+.my-work .content .gallery .title h2, h3{
+    margin: 0;
+}
+
+/* Skills Pop-Up Section */
+.skills {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(22, 22, 22);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.skills .top-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 0 10px;
+}
+
+.skills .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills .logo img {
+    width: 60px;
+    border-radius: 100%;
+    box-shadow:  0 0 8px black;
+    outline: #ffffff solid 1.5px;
+}
+
+.skills .logo .name {
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* or any small value */
+    margin-left: 10px;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+.skills .logo h1, a {
+    margin: 0;
+    font-size: 1rem;
+    padding: 0;
+    text-shadow:  0 0 6px black;
+    text-decoration: none;
+}
+
+.skills .logo h2, a {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-shadow:  0 0 6px rgb(0, 0, 0);
+}
+
+.skills .close-button button{
+    width: 60px;
+    background-color: rgb(255, 255, 255);
+    color: #181818;
+    padding: 8px;
+    text-align: center;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow:  0 0 8px black;
+}
+
+.skills .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.skills-content {
+    display: flex;
+    justify-content: space-evenly;
+    width: calc(100% / 2);
+    flex-wrap: wrap;
+    row-gap: 70px
+}
+
+.skills .content .it-skills {
+    display: block;
+    width: 100%;
+    
+}
+
+.skills .content .it-skills .it-skills-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* IT Skills icons */
+.skills .content {
+    justify-content: center;
+}
+.skills .content .it-skills .it-skills-content img {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+/* Porsetage of Skills */
+.skills .content .it-skills .it-skills-content .porsentage {
+    display: inline-block;
+    width: 26.3px;
+}
+
+
+/* Deffault Back-line */
+.skills .content .it-skills .it-skills-content .back-line {
+    display: inline-block;
+    background-color: #353535;
+    width: 250px;
+    height: 6px;
+    border-radius: 20px;
+}
+
+/* First Skill */
+.skills .content .it-skills .it-skills-content .first-skill .front-line {
+    background-color: #009c00;
+    width: 60%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* Second Skill */
+.skills .content .it-skills .it-skills-content .second-skill .front-line {
+    background-color: #009c00;
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* third Skill */
+.skills .content .it-skills .it-skills-content .third-skill .front-line {
+    background-color: #009c00;
+    width: 40%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* Fourth Skill */
+.skills .content .it-skills .it-skills-content .fourth-skill .front-line {
+    background-color: #009c00;
+    width: 30%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* Fifth Skill */
+.skills .content .it-skills .it-skills-content .fifth-skill .front-line {
+    background-color: #009c00;
+    width: 40%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* Sixth Skill */
+.skills .content .it-skills .it-skills-content .sixth-skill .front-line {
+    background-color: #009c00;
+    width: 70%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* Business Skils Section */
+/* First Skills */
+.business-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.business-skills h3 {
+    color: white;
+}
+
+.business-skills .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 60px 0 ;
+}
+
+.business-skills .content .first-skill, .business-skills .content .second-skill, .business-skills .content .third-skill, .business-skills .content .fourth-skill, .business-skills .content .fifth-skill {
+    width: 110px;
+    height: 110px;
+}
+
+.business-skills .content .logo {
+    width: 110px;
+    height: 110px;
+    overflow:hidden;
+}
+
+.business-skills .content .logo img {
+    width: 80px;
+    outline: none;
+    border-radius: 100px;
+}
+
+
+/* Tools */
+.tools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.tools-content {
+    overflow: hidden;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    white-space: nowrap;
+
+}
+
+@keyframes slide {
+    0% {
+        transform: translatex(0);
+    }
+    100% {
+        transform: translatex(-100%);
+    }
+}
+
+.tools .logos {
+    display: inline-block;
+    animation: slide 10s linear infinite;
+}
+
+.tools .tools-content .logos img {
+    height: 50px;
+    margin: 20px;
+}
+
+.logos:hover {
+    animation-play-state: paused;
+}
+
+.tools-content::after,
+.tools-content::before {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 2;
+    content: "";
+}
+
+.tools-content::before {
+    left: 0;
+    background: linear-gradient(to left,rgba(22, 22, 22, 0), rgb(22, 22, 22));
+}
+
+.tools-content::after {
+    right: 0;
+    background: linear-gradient(to right,rgba(22, 22, 22, 0), rgb(22, 22, 22));
 }
