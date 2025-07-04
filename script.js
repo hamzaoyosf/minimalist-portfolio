@@ -65,32 +65,84 @@ loopTyping();
 
 
 // Circle Animation   
-let anim = document.getElementsByClassName('hero-pic');
+let pop = document.getElementsByClassName('hero-pic');
 
-for (let i = 0; i < anim.length; i++) {
-    anim[i].addEventListener('click', function () {
-      let style = document.createElement('style');
-      style.innerHTML = `
+for (let i = 0; i < pop.length; i++) {
+  pop[i].addEventListener('click', function () {
+    // Add circle animation styles
+    let style = document.createElement('style');
+    style.innerHTML = `
       @keyframes loading {
         100% {
           stroke: #55ff00;
-          stroke-dasharray: 8;
-          transform: (rotate 210deg);
+          stroke-dasharray: 10;
+          transform: rotate(210deg);
         }
       }
       .pic .statu svg {
-        animation:loading 1500ms ease-in-out;
+        animation: loading 1400ms ease-in-out;
       }
-      `;
-      document.head.appendChild(style);
+    `;
+    document.head.appendChild(style);
 
-      anim[i].classList.add('dynamic-class');
-        
-        setTimeout(() => {
-  style.parentNode.removeChild(style);
-  alert;
-}, 1600);
-    });
+    pop[i].classList.add('dynamic-class');
+
+    // Wait 1400ms before showing the "About Me" section
+    setTimeout(() => {
+      style.remove(); // Remove animation style
+
+      let aboutMeSection = document.createElement('section');
+      aboutMeSection.innerHTML = `
+          <div class="top-head">
+              <div class="logo">
+                  <img src="Media/Images/Hero-pic.jpg" alt="Hamza Ouyoussef">
+                  <div class="name">
+                      <h1>Hamza Ouyoussef</h1>
+                      <h2>@hamzaoyosf</h2>  
+                  </div>
+              </div>
+              <div class="close-button">
+                  <button>Close</button>
+              </div>
+          </div>
+          <div class="content">
+              <h1>About Me</h1>
+              <img src="Media/Images/Right.png" alt="hamzaoyosf">
+              <p>Hi! My name is Hamza Ouyoussef, AKA Hamza OYOSF. I'm <span class="age"></span> years old and I'm from MOROCCO. I'm a Quality Assurance (QA) Engineer. I have several skills that help me in QA engineering, like social media marketing and management, basics in design, and strong research and self-learning abilities.</p>
+          </div>
+      `;
+
+      aboutMeSection.classList.add('about-me');
+      document.body.appendChild(aboutMeSection);
+
+      // Add close event
+      const closeBtn = aboutMeSection.querySelector('.close-button button');
+      closeBtn.addEventListener('click', function () {
+        aboutMeSection.remove();
+      });
+
+      const age = aboutMeSection.querySelector(".age");
+
+        // Calculate age
+        const birthDate = new Date(1999, 3, 15); // Months are zero-indexed: 3 = April
+        const today = new Date();
+        let calculatedAge = today.getFullYear() - birthDate.getFullYear();
+
+        // Adjust if the birthday hasn't occurred yet this year
+        const hasHadBirthdayThisYear = 
+            today.getMonth() > birthDate.getMonth() || 
+            (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+
+        if (!hasHadBirthdayThisYear) {
+          calculatedAge--;
+        }
+
+      age.textContent = calculatedAge;
+
+      
+
+    }, 1200);
+  });
 }
 
 
@@ -98,9 +150,10 @@ for (let i = 0; i < anim.length; i++) {
 let highlightAnimationOne = document.getElementsByClassName('parent-block-one');
 
 for (let i = 0; i < highlightAnimationOne.length; i++) {
-    highlightAnimationOne[i].addEventListener('click', function () {
-      let style = document.createElement('style');
-      style.innerHTML = `
+  highlightAnimationOne[i].addEventListener('click', function () {
+    // Add circle animation styles
+    let style = document.createElement('style');
+    style.innerHTML = `
       @keyframes loading {
         100% {
           stroke: #55ff00;
@@ -111,25 +164,77 @@ for (let i = 0; i < highlightAnimationOne.length; i++) {
       .parent-block-one .child-block-one svg {
         animation:loading 1500ms ease-in-out;
       }
-      `;
-      document.head.appendChild(style);
+    `;
+    document.head.appendChild(style);
 
-      highlightAnimationOne[i].classList.add('dynamic-class');
-        
-        setTimeout(() => {
-  style.parentNode.removeChild(style);
-  alert;
-}, 1600);
-    });
+    highlightAnimationOne[i].classList.add('dynamic-class');
+
+    // Wait 1400ms before showing the "About Me" section
+    setTimeout(() => {
+      style.remove(); // Remove animation style
+
+      let aboutMeSection = document.createElement('section');
+      aboutMeSection.innerHTML = `
+          <div class="top-head">
+              <div class="logo">
+                  <img src="Media/Images/Hero-pic.jpg" alt="Hamza Ouyoussef">
+                  <div class="name">
+                      <h1>Hamza Ouyoussef</h1>
+                      <h2>@hamzaoyosf</h2>  
+                  </div>
+              </div>
+              <div class="close-button">
+                  <button>Close</button>
+              </div>
+          </div>
+          <div class="content">
+              <h1>About Me</h1>
+              <img src="Media/Images/Right.png" alt="hamzaoyosf">
+              <p>Hi! My name is Hamza Ouyoussef, AKA Hamza OYOSF. I'm <span class="age"></span> years old and I'm from MOROCCO. I'm a Quality Assurance (QA) Engineer. I have several skills that help me in QA engineering, like social media marketing and management, basics in design, and strong research and self-learning abilities.</p>
+          </div>
+      `;
+
+      aboutMeSection.classList.add('about-me');
+      document.body.appendChild(aboutMeSection);
+
+      // Add close event
+      const closeBtn = aboutMeSection.querySelector('.close-button button');
+      closeBtn.addEventListener('click', function () {
+        aboutMeSection.remove();
+      });
+
+      const age = aboutMeSection.querySelector(".age");
+
+        // Calculate age
+        const birthDate = new Date(1999, 3, 15); // Months are zero-indexed: 3 = April
+        const today = new Date();
+        let calculatedAge = today.getFullYear() - birthDate.getFullYear();
+
+        // Adjust if the birthday hasn't occurred yet this year
+        const hasHadBirthdayThisYear = 
+            today.getMonth() > birthDate.getMonth() || 
+            (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+
+        if (!hasHadBirthdayThisYear) {
+          calculatedAge--;
+        }
+
+      age.textContent = calculatedAge;
+
+      
+
+    }, 1200);
+  });
 }
 
 // Highlights Circle Two Animation
 let highlightAnimationTwo = document.getElementsByClassName('parent-block-two');
 
 for (let i = 0; i < highlightAnimationTwo.length; i++) {
-    highlightAnimationTwo[i].addEventListener('click', function () {
-      let style = document.createElement('style');
-      style.innerHTML = `
+  highlightAnimationTwo[i].addEventListener('click', function () {
+    // Add circle animation styles
+    let style = document.createElement('style');
+    style.innerHTML = `
       @keyframes loading {
         100% {
           stroke: #55ff00;
@@ -140,25 +245,89 @@ for (let i = 0; i < highlightAnimationTwo.length; i++) {
       .parent-block-two .child-block-two svg {
         animation:loading 1500ms ease-in-out;
       }
-      `;
-      document.head.appendChild(style);
+    `;
+    document.head.appendChild(style);
 
-      highlightAnimationTwo[i].classList.add('dynamic-class');
-        
-        setTimeout(() => {
-  style.parentNode.removeChild(style);
-  alert;
-}, 1600);
-    });
+    highlightAnimationTwo[i].classList.add('dynamic-class');
+
+    // Wait 1400ms before showing the "About Me" section
+    setTimeout(() => {
+      style.remove(); // Remove animation style
+
+      let myWorkSection = document.createElement('section');
+      myWorkSection.innerHTML = `
+        <div class="top-head">
+          <div class="logo">
+              <a href="#"><img src="Media/Images/Hero-pic.jpg" alt="Hamza Ouyoussef"></a>
+              <div class="name">
+                  <a href="#"><h1>Hamza Ouyoussef</h1></a>
+                  <a href="#"><h2>@hamzaoyosf</h2></a>
+              </div>
+          </div>
+          <div class="close-button">
+              <button>Close</button>
+          </div>
+        </div>
+        <div class="content">
+          <h1>My Work</h1>
+          <section class="gallery">
+              <div class="one">
+                  <img src="Media/Images/Hero-pic.jpg" alt="First Project<">
+                  <div class="title">
+                      <h2>First Project</h2>
+                      <h3>description</h3> 
+                  </div>
+                  
+              </div>
+              <div class="two">
+                  <img src="Media/Images/Hero-pic.jpg" alt="Second Project">
+                  <div class="title">
+                      <h2>Second Project</h2>
+                      <h3>description</h3> 
+                  </div>
+                  
+              </div>
+              <div class="three">
+                  <img src="Media/Images/Hero-pic.jpg" alt="Third Project">
+                  <div class="title">
+                      <h2>Third Project</h2>
+                      <h3>description</h3> 
+                  </div>
+                  
+              </div>
+              <div class="fore">
+                  <img src="Media/Images/Hero-pic.jpg" alt="Forth Project">
+                  <div class="title">
+                      <h2>Forth Project</h2>
+                      <h3>description</h3> 
+                  </div>
+                  
+              </div>
+          </section>
+        </div>
+      `;
+
+      myWorkSection.classList.add('my-work');
+      document.body.appendChild(myWorkSection);
+
+      // Add close event
+      const closeBtn = myWorkSection.querySelector('.close-button button');
+      closeBtn.addEventListener('click', function () {
+        myWorkSection.remove();
+      });     
+
+    }, 1200);
+  });
 }
 
 // Highlights Circle Three Animation
 let highlightAnimationThree = document.getElementsByClassName('parent-block-three');
 
 for (let i = 0; i < highlightAnimationThree.length; i++) {
-    highlightAnimationThree[i].addEventListener('click', function () {
-      let style = document.createElement('style');
-      style.innerHTML = `
+  highlightAnimationThree[i].addEventListener('click', function () {
+    // Add circle animation styles
+    let style = document.createElement('style');
+    style.innerHTML = `
       @keyframes loading {
         100% {
           stroke: #55ff00;
@@ -169,16 +338,161 @@ for (let i = 0; i < highlightAnimationThree.length; i++) {
       .parent-block-three .child-block-three svg {
         animation:loading 1500ms ease-in-out;
       }
-      `;
-      document.head.appendChild(style);
+    `;
+    document.head.appendChild(style);
 
-      highlightAnimationThree[i].classList.add('dynamic-class');
-        
-        setTimeout(() => {
-  style.parentNode.removeChild(style);
-  alert;
-}, 1600);
-    });
+    highlightAnimationThree[i].classList.add('dynamic-class');
+
+    // Wait 1400ms before showing the "About Me" section
+    setTimeout(() => {
+      style.remove(); // Remove animation style
+
+      let aboutMeSection = document.createElement('section');
+      aboutMeSection.innerHTML = `
+          <div class="top-head">
+            <div class="logo">
+                <a href="#"><img src="Media/Images/Hero-pic.jpg" alt="Hamza Ouyoussef"></a>
+                <div class="name">
+                    <a href="#"><h1>Hamza Ouyoussef</h1></a>
+                    <a href="#"><h2>@hamzaoyosf</h2></a>
+                </div>
+            </div>
+            <div class="close-button">
+                <button>Close</button>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Skills</h1>
+            <div class="skills-content">
+                <div class="it-skills">
+                    <h2>IT Skills</h2>
+                    <div class="it-skills-content">
+                        <div class="first-skill">
+                            <img src="Media/Images/html-icon.png" alt="HTML">
+                            <div class="back-line">
+                                <div class="front-line"></div>
+                            </div>
+                            <h3 class="porsentage">60%</h3>
+                        </div>
+                        <div class="second-skill">
+                            <img src="Media/Images/css-icon.png" alt="CSS">
+                            <div class="back-line">
+                                <div class="front-line"></div>
+                            </div>
+                            <h3 class="porsentage">50%</h3>
+                        </div>
+                        <div class="third-skill">
+                            <img src="Media/Images/js-icon.svg" alt="JavaScript">
+                            <div class="back-line">
+                                <div class="front-line"></div>
+                            </div>
+                            <h3 class="porsentage">40%</h3>
+                        </div>
+                        <div class="fourth-skill">
+                            <img src="Media/Images/react-icon.png" alt="React.js">
+                            <div class="back-line">
+                                <div class="front-line"></div>
+                            </div>
+                            <h3 class="porsentage">30%</h3>
+                        </div>
+                        <div class="fifth-skill">
+                            <img src="Media/Images/api-icon.png" alt="API">
+                            <div class="back-line">
+                                <div class="front-line"></div>
+                            </div>
+                            <h3 class="porsentage">40%</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="business-skills">
+                    <h2>Business Skills</h2>
+                    <div class="content">
+                        <div class="first-skill">
+                            <div class="logo">
+                                <img src="Media/Images/social media management.png" alt="Social Media">
+                            </div>
+                            <h3 class="name">Social Media Management</h3>
+                            <div class="back-line">
+                                <div class="front-line"></div>
+                            </div>
+                        </div>
+                        <div class="second-skill">
+                            <div class="logo">
+                                <img src="Media/Images/copywriting.png" alt="Copywriting">
+                            </div>
+                            <h3 class="name">Copywriting</h3>
+                            <div class="back-line">
+                                <div class="front-line"></div>
+                            </div>
+                        </div>
+                        <div class="third-skill">
+                            <div class="logo">
+                                <img src="Media/Images/crm.png" alt="CRM">
+                            </div>
+                            <h3 class="name">Custumer Relationship Management (CRM)</h3>
+                            <div class="back-line">
+                                <div class="front-line"></div>
+                            </div>
+                        </div>
+                        <div class="fourth-skill">
+                            <div class="logo">
+                                <img src="Media/Images/envintory management.png" alt="Managenent">
+                            </div>
+                            <h3 class="name">Envintory Management</h3>
+                            <div class="back-line">
+                                <div class="front-line"></div>
+                            </div>
+                        </div>
+                        <div class="fifth-skill">
+                            <div class="logo">
+                                <img src="Media/Images/commerc.png" alt="Commerce">
+                            </div>
+                            <h3 class="name">Commerce</h3>
+                            <div class="back-line">
+                                <div class="front-line"></div>
+                            </div>
+                        </div>
+                        <div class="sixth-skill">
+                            <h3 class="name"></h3>
+                            <div class="back-line">
+                                <div class="front-line"></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="tools">
+                    <h2>Tools</h2>
+                    <div class="tools-content">
+                        <div class="logos">
+                            <img src="Media/Images/make.webp" alt="Make.com">
+                            <img src="Media/Images/Sage.webp" alt="Sage">
+                            <img src="Media/Images/figma.png" alt="Figma">
+                            <img src="Media/Images/manychat.webp" alt="ManyChat">
+                        </div>
+                        <div class="logos">
+                            <img src="Media/Images/make.webp" alt="Make.com">
+                            <img src="Media/Images/Sage.webp" alt="Sage">
+                            <img src="Media/Images/figma.png" alt="Figma">
+                            <img src="Media/Images/manychat.webp" alt="ManyChat">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      `;
+
+      aboutMeSection.classList.add('skills');
+      document.body.appendChild(aboutMeSection);
+
+      // Add close event
+      const closeBtn = aboutMeSection.querySelector('.close-button button');
+      closeBtn.addEventListener('click', function () {
+        aboutMeSection.remove();
+      });
+
+    }, 1200);
+  });
 }
 
 
@@ -195,7 +509,7 @@ for (let i = 0; i < hoverOne.length; i++) {
       addedElement.classList.add('bg-image'); // add class with styling
 
       addedElement.innerHTML = `
-        <img src="/My_Projects/minimalist-portfolio/Media/Images/Left.png" alt="">
+        <img src="Media/Images/Left.png" alt="Hamza Ouyoussef">
       `;
 
       const target = document.querySelector('.left-hover');
@@ -230,7 +544,7 @@ for (let i = 0; i < rightHoverOne.length; i++) {
       addedElement.classList.add('bg-image'); // add class with styling
 
       addedElement.innerHTML = `
-        <img src="/My_Projects/minimalist-portfolio/Media/Images/Right.png" alt="">
+        <img src="Media/Images/Right.png" alt="Hamza Ouyoussef">
       `;
 
       const target = document.querySelector('.right-hover');
@@ -266,7 +580,7 @@ for (let i = 0; i < hoverTwo.length; i++) {
       addedElement.classList.add('bg-image'); // add class with styling
 
       addedElement.innerHTML = `
-        <img src="/My_Projects/minimalist-portfolio/Media/Images/Left.png" alt="">
+        <img src="Media/Images/Left.png" alt="Hamza Ouyoussef">
       `;
 
       const target = document.querySelector('.left-hover');
@@ -301,7 +615,7 @@ for (let i = 0; i < rightHoverTwo.length; i++) {
       addedElement.classList.add('bg-image'); // add class with styling
 
       addedElement.innerHTML = `
-        <img src="/My_Projects/minimalist-portfolio/Media/Images/Right.png" alt="">
+        <img src="Media/Images/Right.png" alt="Hamza Ouyoussef">
       `;
 
       const target = document.querySelector('.right-hover');
@@ -336,7 +650,7 @@ for (let i = 0; i < hoverThree.length; i++) {
       addedElement.classList.add('bg-image'); // add class with styling
 
       addedElement.innerHTML = `
-        <img src="/My_Projects/minimalist-portfolio/Media/Images/Left.png" alt="">
+        <img src="Media/Images/Left.png" alt="Hamza Ouyoussef">
       `;
 
       const target = document.querySelector('.left-hover');
@@ -371,7 +685,7 @@ for (let i = 0; i < rightHoverThree.length; i++) {
       addedElement.classList.add('bg-image'); // add class with styling
 
       addedElement.innerHTML = `
-        <img src="/My_Projects/minimalist-portfolio/Media/Images/Right.png" alt="">
+        <img src="Media/Images/Right.png" alt="Hamza Ouyoussef">
       `;
 
       const target = document.querySelector('.right-hover');
